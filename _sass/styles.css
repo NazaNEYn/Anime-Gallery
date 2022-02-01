@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html body {
+  width: 100%;
+  height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.head {
+  background: #fbdece;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  border: solid black 2.2px;
+  position: relative;
+}
+
+.head .left-eye {
+  background: white;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: solid black 1px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+
+.head .left-eye::before {
+  content: "";
+  display: block;
+  background: black;
+  width: 5.3rem;
+  height: 5.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  border: solid black 1px;
+}
+
+.head .left-eye::after {
+  content: "";
+  display: block;
+  background: white;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 14px;
+}
+
+.head .left-eye .shy {
+  background: #e96c91;
+  width: 4rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 80px;
+  left: 18px;
+  border-radius: 50%;
+}
+
+.head .right-eye {
+  background: white;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: solid black 1px;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+}
+
+.head .right-eye::before {
+  content: "";
+  display: block;
+  background: black;
+  width: 5.3rem;
+  height: 5.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  border: solid black 1px;
+}
+
+.head .right-eye::after {
+  content: "";
+  display: block;
+  background: white;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 14px;
+}
+
+.head .right-eye .shy {
+  background: #e96c91;
+  width: 4rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 80px;
+  left: 18px;
+  border-radius: 50%;
+}
+
+.head .mouth {
+  background: rgba(255, 255, 255, 0);
+  width: 2rem;
+  height: 2.2rem;
+  -webkit-box-shadow: 5px 1px 1px 1px black;
+          box-shadow: 5px 1px 1px 1px black;
+  border-radius: 50%;
+  -webkit-transform: rotate(75deg);
+          transform: rotate(75deg);
+  position: absolute;
+  top: 160px;
+  left: 108px;
+}
+
+.head .mouth::after {
+  content: "";
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  width: 2rem;
+  height: 2.2rem;
+  -webkit-box-shadow: 5px 1px 1px 1px black;
+          box-shadow: 5px 1px 1px 1px black;
+  border-radius: 50%;
+  -webkit-transform: translate(-10px, -33px);
+          transform: translate(-10px, -33px);
+  position: absolute;
+  top: 55px;
+  left: 5px;
+}
+
+.fangs .fang1 {
+  background: rgba(255, 255, 255, 0);
+  width: 3.5rem;
+  height: 3.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(153, 153, 153, 0.4)), to(rgba(204, 204, 204, 0.5)));
+  background: linear-gradient(rgba(153, 153, 153, 0.4), rgba(204, 204, 204, 0.5));
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
+          clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  width: 100px;
+  height: 100px;
+}
+
+.dino-head {
+  background: #63c18b;
+  width: 28rem;
+  height: 28rem;
+  z-index: -1;
+  position: absolute;
+  top: -39px;
+  left: -32px;
+  border-radius: 50%;
+  border: solid black 2.2px;
+}
+
+.dino-head .dino-eyes {
+  background: black;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 85px;
+}
+
+.dino-head .dino-eyes::after {
+  content: "";
+  display: block;
+  background: black;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 85px;
+}
+
+.dino-head .dino-nose {
+  background: black;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 125px;
+}
+
+.dino-head .dino-nose::after {
+  content: "";
+  display: block;
+  background: black;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+.egg-shell {
+  background: #d17cbd;
+  width: 35rem;
+  height: 22rem;
+  border-radius: 0% 0% 51% 48% / 0% 0% 99% 100%;
+  position: absolute;
+  top: 420px;
+  left: 520px;
+}
+/*# sourceMappingURL=styles.css.map */

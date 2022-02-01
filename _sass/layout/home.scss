@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+        font-family: 'Lato', sans-serif;
+    font-size: 62.5%;
+}
+
+// ***** COLORS
+$transparent: rgba(255, 255, 255, 0);
+$navy: #285ff7;
+$silver: #879590;
+$hashnode-font: #333;
+$light-black: #23252f;
+$dark-black: #161724;
+$neon-green: #64ed85;
+// ********
+// **** MIXINS
+@mixin basics($w, $h, $color) {
+    width: $w;
+    height: $h;
+    background: $color;
+}
+
+@mixin position($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// *********************************
+// *********************************
+
+body {
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    li {
+        list-style: none;
+        max-width: 10%;
+        filter: brightness(60%);    
+        transition: max-width 1.5s;
+        border: solid $transparent 8px;
+        border-radius: 20px;
+        &:last-child {
+            transition: transform 2s;
+            &:hover {
+                transform: translateX(70%);
+                transition: transform 2s;
+
+            }
+        }
+        &:hover {
+            max-width: 100%;
+            filter: brightness(110%) saturate(155%);    
+            transition: max-width 3s, border 1.4s, border-radius 1s;
+            border: solid $silver 8px;
+        }
+        img {
+            max-height: 55vmin;
+            transition: border-radius 1s;
+            border-radius: 20px;
+            &:hover {
+                transition: border-radius 1s;
+            }
+            }
+    }
+}

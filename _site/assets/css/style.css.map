@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"style.scss",
+		"_sass/styles.scss",
+		"_sass/layout/home.scss"
+	],
+	"sourcesContent": [
+		"@import 'styles.scss';\n",
+		"@import 'layout/home.scss';",
+		"*,\n*::before,\n*::after {\n    padding: 0;\n    margin: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n        font-family: 'Lato', sans-serif;\n    font-size: 62.5%;\n}\n\n// ***** COLORS\n$transparent: rgba(255, 255, 255, 0);\n$navy: #285ff7;\n$silver: #879590;\n$hashnode-font: #333;\n$light-black: #23252f;\n$dark-black: #161724;\n$neon-green: #64ed85;\n// ********\n// **** MIXINS\n@mixin basics($w, $h, $color) {\n    width: $w;\n    height: $h;\n    background: $color;\n}\n\n@mixin position($top, $left) {\n    position: absolute;\n    top: $top;\n    left: $left;\n}\n\n\n\n@mixin center {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n\n// *********************************\n// *********************************\n\nbody {\n    height: 100vh;\n    background: #ccc;\n    display: flex;\n    align-items: center;\n}\n\nul {\n    width: 100%;\n    display: inline-flex;\n    flex-direction: row;\n    li {\n        list-style: none;\n        max-width: 10%;\n        filter: brightness(60%);    \n        transition: max-width 1.5s;\n        border: solid $transparent 8px;\n        border-radius: 20px;\n        &:last-child {\n            transition: transform 2s;\n            &:hover {\n                transform: translateX(70%);\n                transition: transform 2s;\n\n            }\n        }\n        &:hover {\n            max-width: 100%;\n            filter: brightness(110%) saturate(155%);    \n            transition: max-width 3s, border 1.4s, border-radius 1s;\n            border: solid $silver 8px;\n        }\n        img {\n            max-height: 55vmin;\n            transition: border-radius 1s;\n            border-radius: 20px;\n            &:hover {\n                transition: border-radius 1s;\n            }\n            }\n    }\n}"
+	],
+	"names": [],
+	"mappings": "AEAA,AAAA,CAAC,CACD,CAAC,EAAE,MAAM,CACT,CAAC,EAAE,KAAK,AAAC,CACL,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,UAAU,CACzB,AAED,AAAA,IAAI,AAAC,CACG,WAAW,CAAE,kBAAkB,CACnC,SAAS,CAAE,KAAK,CACnB,AAqCD,AAAA,IAAI,AAAC,CACD,MAAM,CAAE,KAAK,CACb,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACtB,AAED,AAAA,EAAE,AAAC,CACC,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,WAAW,CACpB,cAAc,CAAE,GAAG,CA+BtB,AAlCD,AAII,EAJF,CAIE,EAAE,AAAC,CACC,UAAU,CAAE,IAAI,CAChB,SAAS,CAAE,GAAG,CACd,MAAM,CAAE,eAAe,CACvB,UAAU,CAAE,cAAc,CAC1B,MAAM,CAAE,KAAK,CAlDP,mBAAsB,CAkDD,GAAG,CAC9B,aAAa,CAAE,IAAI,CAuBtB,AAjCL,AAWQ,EAXN,CAIE,EAAE,CAOI,UAAU,AAAC,CACT,UAAU,CAAE,YAAY,CAM3B,AAlBT,AAaY,EAbV,CAIE,EAAE,CAOI,UAAU,CAEN,KAAK,AAAC,CACJ,SAAS,CAAE,eAAe,CAC1B,UAAU,CAAE,YAAY,CAE3B,AAjBb,AAmBQ,EAnBN,CAIE,EAAE,CAeI,KAAK,AAAC,CACJ,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,gBAAgB,CAAC,cAAc,CACvC,UAAU,CAAE,2CAA2C,CACvD,MAAM,CAAE,KAAK,CA9DhB,OAAO,CA8DkB,GAAG,CAC5B,AAxBT,AAyBQ,EAzBN,CAIE,EAAE,CAqBE,GAAG,AAAC,CACA,UAAU,CAAE,MAAM,CAClB,UAAU,CAAE,gBAAgB,CAC5B,aAAa,CAAE,IAAI,CAIlB,AAhCb,AA6BY,EA7BV,CAIE,EAAE,CAqBE,GAAG,CAIG,KAAK,AAAC,CACJ,UAAU,CAAE,gBAAgB,CAC/B"
+}
